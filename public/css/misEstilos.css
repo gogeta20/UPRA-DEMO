@@ -1,0 +1,243 @@
+:root {
+    --azulPrimario: #003DA5;
+    --verde: #1cc88a;
+    --white: #ffffff;
+/*    medidas 1.2rem  */
+
+
+
+    /* colores para el home*/
+    --azulPresentacionHome: #003da5b5;
+    --grisPresentacionHome: #d0b9a17d;
+}
+
+/* background home */
+.bg-gradient-primary{
+    background-color: var(--azulPrimario) !important;
+    background-image: none !important;
+}
+.masthead .masthead-bg {
+    background-color: var(--azulPresentacionHome)
+}
+.overlay {
+    background-color: var(--grisPresentacionHome);
+}
+/* boton home */
+.btn-secondary {
+    background-color: var(--verde);
+    border-color: var(--verde);
+    transition: width 1s;
+    width: 100%;
+}
+.btn-secondary:hover{
+    width: 160%;
+    background-color: var(--verde) !important;
+    border-color: var(--verde) !important;
+}
+.btn-registro{
+    background-color: #f6c23e;
+    background-image: linear-gradient(
+            180deg
+            ,#f6c23e 10%,#dda20a 100%);
+    background-size: cover;
+    border-color: #f6c23e;
+}
+.btn-registro:hover{
+    border-color:#f6c23e !important;
+}
+/* escritorio -----------------------------------------*/
+.fa-home{
+    font-size: 1.2rem !important;
+}
+body {
+    font-family: Tahoma;
+}
+
+
+
+/* declare a 7 column grid on the #calendar */
+#calendar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-radius: .5em;
+}
+
+#calendar tr, #calendar tbody {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+}
+
+caption {
+    text-align: center;
+    grid-column: 1 / -1;
+    font-size: 130%;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+#calendar a {
+    color: #8e352e;
+    text-decoration: none;
+}
+.calendario2{
+    min-height: 500px !important;
+}
+#calendar td, #calendar th {
+    padding: 5px;
+    box-sizing:border-box;
+    border: 1px solid #ccc;
+}
+
+#calendar .weekdays {
+    background: var(--azulPrimario);
+}
+
+
+#calendar .weekdays th {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 20px;
+    border: none !important;
+    padding: 10px 6px;
+    color: #fff;
+    font-size: 13px;
+}
+
+#calendar td {
+    max-height: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+#calendar .days li:hover {
+    background: #d3d3d3;
+}
+
+#calendar .date {
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 4px;
+    /*background: #333;*/
+    color: #000;
+    /*width: 20px;*/
+    border-radius: 50%;
+    flex: 0 0 auto;
+    align-self: flex-end;
+}
+
+#calendar .event {
+    flex: 0 0 auto;
+    font-size: 13px;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 5px;
+    line-height: 14px;
+    background: #e4f2f2;
+    /*border: 1px solid #b5dbdc;*/
+    color: #009aaf;
+    text-decoration: none;
+}
+
+#calendar .event-desc {
+    color: #666;
+    margin: 3px 0 7px 0;
+    text-decoration: none;
+}
+
+#calendar .other-month {
+    background: #f5f5f5;
+    color: #666;
+}
+/*#calendar{margin:30px;}*/
+#calendar {
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 350px;
+
+}
+#calendar tr th,
+#calendar tr td {
+    border-right: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    padding: 5px;
+}
+#calendar tr th:first-child, #calendar tr th:last-child{
+    border-top:solid 1px      #bbb;}
+#calendar tr th:first-child,
+#calendar tr td:first-child {
+    border-left: 1px solid #bbb;
+
+}
+#calendar tr th:first-child,
+#calendar tr td:first-child {
+    border-left: 1px solid #bbb;
+}
+#calendar tr th {
+    /*background: #3f3f3f;*/
+    text-align: left;
+}
+
+#calendar.Info tr th,
+#calendar.Info tr:first-child td
+{
+    border-top: 1px solid #bbb;
+}
+
+/* top-left border-radius */
+#calendar tr:first-child th:first-child,
+#calendar.Info tr:first-child td:first-child {
+    border-top-left-radius: 6px;
+}
+
+/* top-right border-radius */
+#calendar tr:first-child th:last-child,
+#calendar.Info tr:first-child td:last-child {
+    border-top-right-radius: 6px;
+}
+
+/* bottom-left border-radius */
+#calendar tr:last-child td:first-child {
+    border-bottom-left-radius: 6px;
+}
+
+/* bottom-right border-radius */
+#calendar tr:last-child td:last-child {
+    border-bottom-right-radius: 6px;
+}
+/* ============================
+				Mobile Responsiveness
+   ============================*/
+
+
+@media(max-width: 768px) {
+
+    #calendar .weekdays, #calendar .other-month {
+        display: none;
+    }
+
+    #calendar li {
+        height: auto !important;
+        border: 1px solid #ededed;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: -1px;
+    }
+
+    #calendar, #calendar tr, #calendar tbody {
+        grid-template-columns: 1fr;
+    }
+
+    #calendar  tr {
+        grid-column: 1 / 2;
+    }
+
+    #calendar .date {
+        align-self: flex-start;
+    }
+    #calendario{
+        display:none;
+    }
+}
